@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "flask",
             "env": {
-                "FLASK_APP": "snippet_2.py",
+                "FLASK_APP": "snippet.py",
                 "FLASK_ENV": "development",
                 "FLASK_DEBUG": "0"
             },
