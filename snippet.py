@@ -13,12 +13,15 @@ BASE_URL = "https://internal-dev.api.service.nhs.uk"  # to be changed
 authorize_url = f"{BASE_URL}/oauth2/authorize"
 access_token_url = f"{BASE_URL}/oauth2/token"
 
-if os.path.exists("./local_var.py"):
-    from local_var import redirect_uri, client_id, client_secret
-else:
-    redirect_uri = os.getenv('REDIRECT_URI')
-    client_id = os.getenv('CLIENT_ID')
-    client_secret = os.getenv('CLIENT_SECRET')
+# replace "redirect_uri" with callback url,
+# which you registered during the app registration
+redirect_uri = os.getenv('REDIRECT_URI')
+
+# replace with your api key
+client_id = os.getenv('CLIENT_ID')
+
+# replace with your secret
+client_secret = os.getenv('CLIENT_SECRET')
 
 
 @app.route("/")
